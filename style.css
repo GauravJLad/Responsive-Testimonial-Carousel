@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fdf4ff;
+  padding: 2rem;
+  color: #2d2d2d;
+}
+
+.carousel {
+  max-width: 800px;
+  margin: 5rem auto;
+  background-color: #9b59b6;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 3rem 4rem;
+}
+
+.slides {
+  position: relative;
+  height: 280px;
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-shrink: 0;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.slide img {
+  height: 280px;
+  border-radius: 12px;
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+}
+
+.slide blockquote {
+  max-width: 400px;
+}
+
+.testimonial-text {
+  color: #f3e5f5;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  color: #e1bee7;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-job {
+  color: #e1bee7;
+  font-size: 0.75rem;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 2px solid #9b59b6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.btn:hover {
+  background-color: #e1bee7;
+}
+
+.btn--left {
+  left: 10px;
+}
+
+.btn--right {
+  right: 10px;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #9b59b6;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot--fill {
+  background-color: #ffffff;
+}
+
+/* RESPONSIVE SCREEN CODE */
+@media (max-width: 768px) {
+  .carousel {
+    height: 39rem;
+    margin-top: 0.5rem;
+  }
+
+  .slide {
+    flex-direction: column;
+    text-align: center;
+    gap: 5rem;
+  }
+
+  .slide img {
+    height: 280px;
+    border-radius: 12px;
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+  }
+
+  .btn--left,
+  .btn--right {
+    top: auto;
+    bottom: 60px;
+    transform: translateY(0);
+  }
+
+  .btn--left {
+    left: 20%;
+  }
+
+  .btn--right {
+    right: 20%;
+  }
+
+  .dots {
+    margin-bottom: 1rem;
+  }
+}

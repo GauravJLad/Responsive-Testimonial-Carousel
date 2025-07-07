@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Testimonial Carousel</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="slides" id="slides">
+        <div class="slide">
+          <img src="imgs/maria.jpg" alt="Maria" />
+          <blockquote>
+            <p class="testimonial-text">
+              “SoleVibe has completely changed how I shop for sneakers. From
+              exclusive drops to early access, it’s the ultimate place for
+              sneakerheads.”
+            </p>
+            <p class="testimonial-author">Maria Waugh</p>
+            <p class="testimonial-job">Product Manager, Australia</p>
+          </blockquote>
+        </div>
+        <div class="slide">
+          <img src="imgs/charles.jpg" alt="Charles" />
+          <blockquote>
+            <p class="testimonial-text">
+              “I received my limited edition pair in 2 days. Authentic,
+              perfectly packed, and smoother than any online experience I’ve
+              had.”
+            </p>
+            <p class="testimonial-author">Charles Johnson</p>
+            <p class="testimonial-job">UX Designer, New York</p>
+          </blockquote>
+        </div>
+        <div class="slide">
+          <img src="imgs/noah.jpg" alt="Noah" />
+          <blockquote>
+            <p class="testimonial-text">
+              “Their product curation is top-notch. I don’t even check other
+              websites anymore. SoleVibe just gets what I want.”
+            </p>
+            <p class="testimonial-author">Noah Anderson</p>
+            <p class="testimonial-job">Marketing Strategist, New Zealand</p>
+          </blockquote>
+        </div>
+      </div>
+
+      <button class="btn btn--left" id="btnLeft">
+        <svg
+          class="btn-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button class="btn btn--right" id="btnRight">
+        <svg
+          class="btn-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+
+      <div class="dots">
+        <button class="dot dot--fill"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
